@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WU2U2b</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(
+            function()
+            {
+$("#box5").hide();
+$("#box4").hide();
+
+$("#bytPlats").click(
+    function()
+{
+$("#boxhållare").slideUp("slow", function(){
+$("#box2").hide();
+$("#box3").hide();
+$("#box4").show();
+$("#box5").show();
+$("#boxhållare").slideDown();
+});
+});
+
+
+$("#återställ").click(
+    function()
+{
+$("#boxhållare").slideUp("slow", function(){
+$("#box4").hide();
+$("#box5").hide();
+$("#box2").show();
+$("#box3").show();
+$("#boxhållare").slideDown();
+});
+});
+
+
+
+});
+    </script>
+
+<style>
+    #box1
+    {
+        background-color:wheat;
+        width: 400px;
+        height: 50px;
+        position: relative;
+        
+    }
+    #box2, #box5
+    {
+        background-color:chartreuse;
+        width: 200px;
+        height: 400px;
+        position: relative;
+        float: left;
+        font-size: 19px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+        
+    }
+    #box3, #box4
+    {
+        background-color:powderblue;
+        width: 200px;
+        height: 400px;
+        position: relative;
+        float: left;
+        font-size: 27px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: red;
+        
+    }
+    
+p
+{
+    margin: 12px 10px;
+}
+
+    button
+    {
+background-color: gainsboro;
+width: 150px;
+height: 33px;
+margin: 10px 22px;
+border: 2px solid; 
+font-size:25px;
+
+    }
+
+    img
+    {
+        width: 120px;
+        margin: 45px 30px;
+    }
+
+#allt
+{
+margin: 0;
+position: absolute;
+top: 10%;
+left: 37%;
+margin-right: -50%;
+
+}
+
+</style>
+
+</head>
+<body>
+<!--in the body
+    style="margin: 5% 35%;"-->
+
+<div id="allt" >
+
+    <div id="box1">
+
+        <button id="bytPlats" >byt plats</button>
+        <button id="återställ">Återställ</button>
+    </div>
+    <div id="boxhållare">
+
+    <div id="box4"><p>Plats för bild</p> <img src="images/Gnu-color-reiss-head.png" alt=""> </div>
+    <div id="box5"> <p> Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br></p> </div>
+    
+    <div id="box2"> <p> Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br>Här står en text.<br></p> </div>
+    <div id="box3"><p>Plats för bild</p> <img src="images/Gnu-color-reiss-head.png" alt=""> </div>
+    </div>
+
+</div>
+
+</body>
+</html>
